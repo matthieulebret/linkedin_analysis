@@ -47,10 +47,10 @@ def isTitle(string):
 
 @st.cache(suppress_st_warning=True,allow_output_mutation=True)
 def getdata():
-    network = pd.read_csv('C:/Users/matth/Documents/pythonprograms/LinkedIn_post_NordLB/data/Connections.csv',header=3)
-
+    network = pd.read_csv('Connections.csv',header=3)
     network['Connected On'] = pd.to_datetime(network['Connected On'],errors='coerce')
     network['Connected Year']=pd.DataFrame(network['Connected On']).apply(lambda x: x.dt.year)
+    network['Position']=network['Position'].apply(lambda x:str(x))
     network = network.dropna(subset=['Company'],axis=0)
     network = network.dropna(subset=['Group'],axis=0)
     network['Count']=1
