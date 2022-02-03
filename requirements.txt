@@ -1,0 +1,8 @@
+pandas==1.0.5
+altair==4.1.0
+plotly==4.9.0
+xlrd==1.2.0
+openpyxl==3.0.5
+fuzzywuzzy==0.18.0
+streamlit==1.1.0
+numpy==1.19.5
